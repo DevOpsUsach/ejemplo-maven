@@ -27,7 +27,6 @@ pipeline {
             steps {
                 script {
                     bat "nohup bash mvnw spring-boot:run &"
-                    sleep 20
                 }
             }
         }
