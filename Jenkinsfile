@@ -26,7 +26,7 @@ pipeline {
         stage('Run') {
             steps {
                 script {
-                    bat "nohup bash mvnw spring-boot:run &"
+                    bat "nohup bash mvnw.cmd spring-boot:run &"
                 }
             }
         }
