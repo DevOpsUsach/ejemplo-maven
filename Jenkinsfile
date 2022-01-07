@@ -27,6 +27,7 @@ pipeline {
             steps {
                 script {
                     bat "start /min mvnw spring-boot:run &"
+		    sleep 20
                 }
             }
         }
