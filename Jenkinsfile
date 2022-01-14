@@ -48,9 +48,9 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 script {
-                    def scannerHome = tool 'sonar-scanner'
-                    withSonarQubeEnv('sonar-server'){
-                        sh "${scannerHome}/bin/sonar-scanner"
+                    def scannerHome = tool 'SonarQube Scanner 4.6.2'
+                    withSonarQubeEnv('SonarQube local'){
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=sonarqube-token -Dsonar.java.binaries=build"
                     }
                 }
             }
